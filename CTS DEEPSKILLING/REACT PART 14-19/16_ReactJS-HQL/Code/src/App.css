@@ -1,0 +1,122 @@
+/* App.css */
+
+/* General page layout, centering the form and using a white background */
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Heading styling: centered, red color */
+.register-container h2 {
+  color: #ff0000;
+  font-size: 2.2rem;
+  margin: 0 0 25px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Form layout using flexbox for centering fields */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Form group to align labels and textboxes horizontally */
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333333;
+  margin-right: 15px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Input textbox styling: width 250px, rounded corners, proper margins and padding */
+.form-group input {
+  width: 250px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Submit button: blue background, white text, rounded corners */
+.submit-btn {
+  background-color: #007bff; /* Blue background */
+  color: #ffffff; /* White text */
+  border: 1px solid #0056b3;
+  border-radius: 4px; /* Rounded corners */
+  padding: 8px 24px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive layout adjustments for mobile screens */
+@media (max-width: 480px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+  }
+}

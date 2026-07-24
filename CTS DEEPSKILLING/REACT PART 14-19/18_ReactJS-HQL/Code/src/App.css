@@ -1,0 +1,146 @@
+/*
+  Cohort Tracker Application - App.css
+  This file configures the global styling variables, main container, centered title, responsive grid, 
+  and card items, including custom status badges (Green for Completed, Orange for Ongoing).
+*/
+
+:root {
+  --primary-color: #6366f1;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  
+  /* Status Color Palettes */
+  --status-completed-bg: #d1fae5;
+  --status-completed-text: #065f46;
+  --status-ongoing-bg: #ffedd5;
+  --status-ongoing-text: #9a3412;
+  
+  /* Layout and Styling helpers */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Layout Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Centered Title Styling with Gradient text */
+.app-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.dashboard-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+/* Responsive Grid for Cohort Cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Cohort Card Layout with Hover Effects, Shadows, and Rounded Corners */
+.cohort-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.cohort-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header style within each card */
+.card-header {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #4f46e5;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Card Body styling */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-info {
+  margin: 0.85rem 0;
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: inline-block;
+  width: 105px;
+}
+
+/* Status Badge styling - Green for Completed, Orange for Ongoing */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-completed {
+  background-color: var(--status-completed-bg);
+  color: var(--status-completed-text);
+}
+
+.status-ongoing {
+  background-color: var(--status-ongoing-bg);
+  color: var(--status-ongoing-text);
+}
+
+/* Mobile Responsiveness adjustments */
+@media (max-width: 640px) {
+  .dashboard-title {
+    font-size: 2.25rem;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cohort Details Component should always render same html 1`] = `
+<div
+  className="cohort-card"
+>
+  <div
+    className="card-header"
+  >
+    <h3>
+      ADM21JF001
+    </h3>
+  </div>
+  <div
+    className="card-body"
+  >
+    <p
+      className="card-info"
+    >
+      <span
+        className="info-label"
+      >
+        Technology:
+      </span>
+       
+      React
+    </p>
+    <p
+      className="card-info"
+    >
+      <span
+        className="info-label"
+      >
+        Trainer:
+      </span>
+       
+      John Smith
+    </p>
+    <p
+      className="card-info"
+    >
+      <span
+        className="info-label"
+      >
+        Status:
+      </span>
+       
+      <span
+        className="status-badge status-ongoing"
+      >
+        Ongoing
+      </span>
+    </p>
+    <p
+      className="card-info"
+    >
+      <span
+        className="info-label"
+      >
+        Start Date:
+      </span>
+       
+      10-Jan-2026
+    </p>
+    <p
+      className="card-info"
+    >
+      <span
+        className="info-label"
+      >
+        End Date:
+      </span>
+       
+      25-Apr-2026
+    </p>
+  </div>
+</div>
+`;

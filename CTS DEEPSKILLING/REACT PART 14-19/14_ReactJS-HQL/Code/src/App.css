@@ -1,0 +1,197 @@
+/* 
+  App.css - Global Stylesheet for Employees Directory App
+  Establishes theme styles, card styles, and a responsive Flexbox grid.
+*/
+
+/* General layout and font family styling */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6; /* Default Light background */
+  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Outer app container wrapper */
+.app-container {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* App container theme overrides */
+.app-container.light {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.app-container.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Heading style centered on page */
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+/* Centered Toggle Theme Button styling */
+.toggle-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light container's button layout */
+.light .toggle-btn {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.light .toggle-btn:hover {
+  background-color: #334155;
+  transform: translateY(-1px);
+}
+
+/* Dark container's button layout */
+.dark .toggle-btn {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.dark .toggle-btn:hover {
+  background-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* Responsive layout using Flexbox */
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Employee Card Base Styles */
+.employee-card {
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin: 0.5rem;
+  width: 320px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Theme styling for Employee Card */
+
+/* Light Theme: White background, black text, blue action buttons */
+.employee-card.light {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+}
+
+.employee-card.light .action-btn {
+  background-color: #2563eb; /* Blue button */
+  color: #ffffff;
+}
+
+.employee-card.light .action-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Dark Theme: Dark background, white text, orange action buttons */
+.employee-card.dark {
+  background-color: #1e293b;
+  color: #f3f4f6;
+  border: 1px solid #334155;
+}
+
+.employee-card.dark .action-btn {
+  background-color: #f97316; /* Orange button */
+  color: #ffffff;
+}
+
+.employee-card.dark .action-btn:hover {
+  background-color: #ea580c;
+}
+
+/* Details inside employee card */
+.employee-name {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  border-bottom: 2px solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.employee-card.light .employee-name {
+  border-bottom-color: #e5e7eb;
+}
+
+.employee-card.dark .employee-name {
+  border-bottom-color: #334155;
+}
+
+.employee-detail {
+  font-size: 0.95rem;
+  margin: 0.65rem 0;
+  line-height: 1.45;
+}
+
+.employee-detail strong {
+  font-weight: 600;
+  display: inline-block;
+  width: 95px; /* Alignment for key labels */
+}
+
+/* Container for action buttons inside the card */
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* Style for action buttons (Edit, Delete) */
+.action-btn {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}

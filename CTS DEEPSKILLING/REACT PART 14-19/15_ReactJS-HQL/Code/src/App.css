@@ -1,0 +1,143 @@
+/* src/App.css */
+
+/*
+  Global styling rules for the Ticket Raising application.
+  Sets a clean white background, defines layout dimensions for controlled
+  inputs, styles the main heading, and configures alignments to match
+  the reference design.
+*/
+
+/* Root layout reset and body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff; /* White background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer layout container */
+.complaint-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Heading style */
+.main-heading {
+  color: #ff0000; /* Heading Red */
+  text-align: center; /* Heading centered */
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Form structure */
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form input group container to align labels and fields side-by-side */
+.form-group {
+  display: flex;
+  align-items: flex-start; /* Top align label with input/textarea */
+  margin-bottom: 20px;
+  width: 360px; /* Matching the combined width of label (110px) and field (250px) */
+}
+
+/* Labels styled and width-aligned to allow matching start positions for fields */
+.form-group label {
+  width: 110px; /* Fixed width to align fields vertically */
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-top: 4px; /* Slight alignment adjustment */
+  text-align: left;
+}
+
+/* Controlled text input styles */
+.form-group input[type="text"] {
+  width: 250px; /* Textbox width 250px */
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+/* Controlled textarea styles */
+.form-group textarea {
+  width: 250px; /* Textarea width 250px */
+  height: 100px; /* Textarea height 100px */
+  padding: 6px 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  resize: none; /* Disable manual resizing to maintain precise dimensions */
+  box-sizing: border-box;
+}
+
+/* Focus effects for better input visibility */
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: 1px solid #0056b3;
+}
+
+/* Button grouping to maintain align-left styling offset */
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  width: 360px; /* Matches form-group width for alignment consistency */
+}
+
+/* Form submit button styling */
+.submit-btn {
+  background-color: #0056b3; /* Blue button */
+  color: #ffffff; /* White text */
+  border: 1px solid #004085;
+  border-radius: 4px; /* Rounded corners */
+  padding: 6px 18px; /* Padding spacing */
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 110px; /* Offset matches label width to align under fields */
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Hover effect on submit button */
+.submit-btn:hover {
+  background-color: #004085;
+}
+
+/* Responsive layout adjustments for mobile/narrow screens */
+@media (max-width: 480px) {
+  .form-group, .button-group {
+    width: 100%;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form-group label {
+    width: 100%;
+    margin-bottom: 6px;
+    padding-top: 0;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+}

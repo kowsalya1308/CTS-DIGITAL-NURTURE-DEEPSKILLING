@@ -1,0 +1,77 @@
+/* App.css: Global styling for the fetchuserapp application. */
+/* This file defines styling for layout alignment, text coloring, and responsive designs. */
+
+/* Base settings for the body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* White background */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Center everything in the main container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container for the user details card */
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+/* Large heading */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Round profile image with size 180px and box shadow */
+.user-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* Round profile image */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Box shadow around image */
+  object-fit: cover;
+}
+
+/* Loading text in Blue */
+.loading {
+  font-size: 1.5rem;
+  color: #0000ff; /* Blue */
+  font-weight: bold;
+}
+
+/* Error text in Red */
+.error {
+  font-size: 1.5rem;
+  color: #ff0000; /* Red */
+  font-weight: bold;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .user-image {
+    width: 150px;
+    height: 150px;
+  }
+}
