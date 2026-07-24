@@ -1,0 +1,64 @@
+/* Reset and Page Alignment */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.shopping-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Green Heading matching screenshot */
+.heading {
+  color: #008000;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table styling matching screenshot */
+.shopping-table {
+  border-collapse: collapse;
+  border: 2px solid #b0bec5;
+  background-color: #ffffff;
+}
+
+.shopping-table th,
+.shopping-table td {
+  border: 1px solid #b0bec5;
+  padding: 6px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Header row styling */
+.shopping-table th {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Data cells styling */
+.shopping-table td {
+  color: #78909c;
+  font-weight: 500;
+}

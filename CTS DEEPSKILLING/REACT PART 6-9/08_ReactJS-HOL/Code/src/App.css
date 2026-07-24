@@ -1,0 +1,114 @@
+/* Reset basic margins and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+ * Requirement 7: Simple CSS styling
+ * - Center the page
+ * - White background
+ * - Nice font
+ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* App container to flex-center child content */
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+ * Main Counter Container
+ * Adds padding around the content and centers text
+ */
+.counter-container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Heading style */
+.counter-container h1 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #222222;
+}
+
+/* 
+ * Responsive wrapper for button and text pairs 
+ * Displays side-by-side on wide screens, stacks on smaller screens
+ */
+.counter-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Container for each button + counter text pair */
+.counter-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 
+ * Requirement 7: Green rounded buttons
+ * Styled to match the Cognizant hands-on reference screenshot
+ */
+.btn-login,
+.btn-exit {
+  background-color: #90ee90; /* Light green background */
+  border: 1px solid #4caf50; /* Green border */
+  color: #000000;            /* Black text */
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;        /* Rounded corners */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover and active states for buttons */
+.btn-login:hover,
+.btn-exit:hover {
+  background-color: #76db76;
+}
+
+.btn-login:active,
+.btn-exit:active {
+  transform: scale(0.97);
+}
+
+/* Counter text display style */
+.count-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* 
+ * Responsive layout media query for smaller devices 
+ */
+@media (max-width: 600px) {
+  .counter-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

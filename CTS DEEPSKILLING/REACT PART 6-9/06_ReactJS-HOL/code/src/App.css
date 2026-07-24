@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+
+a:hover {
+    color: red;
+}
+
+h1 {
+    color: darkblue;
+}
+
+h2 {
+    color: green;
+}
