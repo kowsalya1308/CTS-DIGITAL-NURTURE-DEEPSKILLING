@@ -1,0 +1,153 @@
+/**
+ * App.css
+ * 
+ * Stylesheet for the Office Space Rental Application.
+ * Implements styling requirements including body background, card styles, and responsive flexbox layout.
+ */
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f3f4f6; /* Light gray background */
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Heading styles */
+.main-heading {
+  text-align: center; /* Centered heading */
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 30px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #374151;
+  margin-bottom: 25px;
+}
+
+/* Single Office Block Styles */
+.single-office-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 0 auto 40px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.single-office-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.single-office-img {
+  width: 300px; /* Required image width */
+  height: 180px; /* Required image height */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.single-office-details h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #111827;
+}
+
+.single-office-details h4 {
+  font-size: 1.125rem;
+  margin: 8px 0;
+  color: #4b5563;
+}
+
+.rent-text {
+  font-weight: bold;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 40px 0;
+}
+
+/* Cards Section Flexbox Layout */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Responsive wrap */
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.office-card {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Border radius */
+  padding: 16px; /* Padding */
+  margin: 10px; /* Margin */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 332px; /* 300px image + 32px padding */
+  box-sizing: border-box;
+}
+
+.office-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-image {
+  width: 300px; /* Required image width */
+  height: 180px; /* Required image height */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-content {
+  width: 100%;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  margin: 0 0 10px 0;
+  color: #111827;
+}
+
+.card-rent {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #374151;
+}
+
+.card-address {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #6b7280;
+}
